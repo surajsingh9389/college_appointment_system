@@ -32,5 +32,3 @@ Authentication is done using **JWT tokens**.
 - **Dev Tools:** Nodemon, Cross-env, dotenv, CORS
 
 ---
-
-## 📂 Project Structure
