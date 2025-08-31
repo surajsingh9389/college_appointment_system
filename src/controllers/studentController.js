@@ -12,6 +12,11 @@ export const bookAppointment = async (req, res) => {
       return res.status(400).json({ message: "Slot not available" });
     }
 
+    //Checking for Professor who add the slot
+    if(slot.professorId != professorId){
+      return res.status(400).json({message: "Invalid Slot"})
+    }
+
     // Create appointment
     const appointment = new Appointment({
       studentId: req.user._id,
